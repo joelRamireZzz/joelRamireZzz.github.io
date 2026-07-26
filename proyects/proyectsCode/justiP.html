@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../assets/shark.png">
+    <title>Projects — Justi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <header class="site-header">
+
+        </div>
+        <nav class="header-nav">
+            <a href="../../index.html">home</a>
+            <a href="https://www.linkedin.com/in/joelramirezzz" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a href="mailto:joelramirezmc@gmail.com">hire me</a>
+            <a href="https://github.com/joelRamireZzz">github</a>
+        </nav>
+    </header>
+
+
+    <img width="190" src="../../assets/shark.png" alt="sharkImg" style="display:block;margin:2rem auto;background:transparent;border:none;box-shadow:none;">
+
+    <main class="container">
+
+        <section class="links-section">
+            <h1 class="page-title">Justi — Local AI <span class="accent">Cooking Assistant</span></h1>
+
+            <div class="section-label">Conversational Kitchen Assistant Powered by Local AI</div>
+            <p class="page-sub" style="color: #f2ecec;">Justi is a conversational assistant that helps with everyday
+                                kitchen tasks. It suggests recipes, guides you through them step by step, and lets
+                                you interact through text or voice. Everything runs entirely on the local machine:
+                                a local LLM (Mistral, served via Ollama) handles the conversation, while local
+                                speech-to-text and text-to-speech engines (XTTS v2) enable voice interaction.
+                                No conversation data leaves the device.
+                                </p>
+            <img src="../../proyects/proyectsCode/assetsProyects/chatJ.png" alt="chatJ">
+
+            <h3>Stack<span class="accent">Used</span></h3>
+            <ul style="color: #f2ecec;">
+                <li style="font-size: 15px;">Backend: FastAPI (Uvicorn).</li>
+                <li style="font-size: 15px;">Language model: Mistral 7B via Ollama (local).</li>
+                <li style="font-size: 15px;">Voice synthesis: XTTS v2 by Coqui (local TTS).</li>
+                <li style="font-size: 15px;">Speech recognition: local Speech-to-Text.</li>
+                <li style="font-size: 15px;">Database: SQLite (users, messages, memories, recipes).</li>
+                <li style="font-size: 15px;">Recipe search: Spoonacular API, with local LLM fallback.</li>
+            </ul>
+
+            <h3>How <span class="accent">it Works</span></h3>
+            <ul style="color: #f2ecec;">
+                <li style="font-size: 15px;">The frontend sends requests to a FastAPI backend over REST.</li>
+                <li style="font-size: 15px;">On every message, Justi builds a dynamic prompt using stored memories (name, diet, allergies, preferences).</li>
+                <li style="font-size: 15px;">New preferences are detected via regex and saved only after explicit user confirmation.</li>
+                <li style="font-size: 15px;">Recipe requests are checked against Spoonacular first; if it fails, the local LLM generates one instead.</li>
+                <li style="font-size: 15px;">Long responses are summarized before being sent to the local TTS engine.</li>
+            </ul>
+                        <img src="../../proyects/proyectsCode/assetsProyects/logsJ.jpg" alt="logs">
+
+            <h3>References</h3>
+            <h4>Ollama documentation:</h4>
+            <a href="https://ollama.com" style="font-size: 15px;">https://ollama.com</a>
+            <h4>Coqui XTTS v2:</h4>
+            <a href="https://github.com/coqui-ai/TTS" style="font-size: 15px;">https://github.com/coqui-ai/TTS</a>
+            <h4>Spoonacular API documentation:</h4>
+            <a href="https://spoonacular.com/food-api" style="font-size: 15px;">https://spoonacular.com/food-api</a>
+            <h4>FastAPI documentation:</h4>
+            <a href="https://fastapi.tiangolo.com" style="font-size: 15px;">https://fastapi.tiangolo.com</a>
+            </div>
+        </section>
+        <a href="../../assets/documents/justiDocumentation.pdf"><img height="120px" src="../../assets/file.png" alt="pdf"></a>
+    </main>
+
+    <footer>
+        <img src="../assets/triangle.png" alt="" width="60" style="opacity:0.4;">
+        <span class="footer-text">© 2026 joel_ramirez</span>
+        <span class="biohazard">☣</span>
+    </footer>
+</body>
+</html>
